@@ -103,8 +103,9 @@
 
   <module name="TreeWalker">
     <module name="Regexp">
-      <property name="format" value="\*\/\n\npackage\s+([a-z]+(\.[a-z0-9_$]+)*);"/>
-      <property name="message" value="No empty line between license header and package name."/>
+      <!-- license + empty line [+ javadoc] + package name -->
+      <property name="format" value="(?s)^\s*/\*.*?\*/\n\n(/\*\*.*?\*/\n)?package\s+([a-z]+(\.[a-z0-9_$]+)*);"/>
+      <property name="message" value="Single empty line between license header and package name."/>
     </module>
     <!-- Checks for Javadoc comments.                     -->
     <!-- See https://checkstyle.org/checks/javadoc/index.html -->
