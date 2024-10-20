@@ -1,2 +1,2 @@
 # cs-config
-Techsenger Checkstyle configuration file
+Techsenger configuration file for Checkstyle
