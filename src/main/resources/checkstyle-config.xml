@@ -102,8 +102,9 @@
   <!-- </module> -->
 
   <module name="TreeWalker">
+    <!-- license + empty line [+ javadoc] + package name-->
+    <!-- however, module-info files are not checked, see https://github.com/checkstyle/checkstyle/issues/8240 -->
     <module name="Regexp">
-      <!-- license + empty line [+ javadoc] + package name -->
       <property name="format" value="(?s)^\s*/\*.*?\*/\n\n(/\*\*.*?\*/\n)?package\s+([a-z]+(\.[a-z0-9_$]+)*);"/>
       <property name="message" value="Single empty line between license header and package name."/>
     </module>
@@ -124,7 +125,7 @@
     <module name="LocalFinalVariableName"/>
     <module name="LocalVariableName"/>
     <module name="MemberName"/>
-    <module name="MethodName"/>
+    <!--<module name="MethodName"/>-->
     <module name="PackageName"/>
     <module name="ParameterName"/>
     <module name="StaticVariableName"/>
