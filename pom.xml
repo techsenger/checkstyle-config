@@ -16,8 +16,61 @@
     </licenses>
 
     <url>https://github.com/techsenger/cs-config</url>
+
+    <scm>
+        <url>https://github.com/techsenger/cs-config.git</url>
+        <connection>scm:git:https://github.com/techsenger/cs-config.git</connection>
+        <developerConnection>scm:git:https://github.com/techsenger/cs-config.git</developerConnection>
+    </scm>
+
     <issueManagement>
         <system>GitHub</system>
         <url>https://github.com/techsenger/cs-config/issues</url>
     </issueManagement>
+
+    <developers>
+        <developer>
+            <id>pavel-castornii</id>
+            <name>Pavel Castornii</name>
+        </developer>
+    </developers>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>3.2.7</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.6.0</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
