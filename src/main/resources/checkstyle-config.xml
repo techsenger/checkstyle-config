@@ -102,11 +102,10 @@
   <!-- </module> -->
 
   <module name="TreeWalker">
-    <!-- license + empty line [+ javadoc] + package name-->
-    <!-- however, module-info files are not checked, see https://github.com/checkstyle/checkstyle/issues/8240 -->
-    <module name="Regexp">
-      <property name="format" value="(?s)^\s*/\*.*?\*/\n\n(/\*\*.*?\*/\n)?package\s+([a-z]+(\.[a-z0-9_$]+)*);"/>
-      <property name="message" value="Single empty line between license header and package name."/>
+    <!-- Empty line between license and package-->
+    <module name="EmptyLineSeparator">
+        <property name="tokens" value="PACKAGE_DEF"/>
+        <property name="allowMultipleEmptyLines" value="false"/>
     </module>
     <!-- Checks for Javadoc comments.                     -->
     <!-- See https://checkstyle.org/checks/javadoc/index.html -->
