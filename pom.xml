@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.techsenger.cs-config</groupId>
     <artifactId>cs-config</artifactId>
-    <version>0.9.0</version>
+    <version>0.9.1</version>
     <packaging>jar</packaging>
-    <name>Techsenger CS Config</name>
+    <name>Checkstyle Config</name>
     <description>Techsenger Checkstyle configuration file.</description>
 
     <licenses>
@@ -18,9 +18,9 @@
     <url>https://github.com/techsenger/cs-config</url>
 
     <scm>
-        <url>https://github.com/techsenger/cs-config.git</url>
         <connection>scm:git:https://github.com/techsenger/cs-config.git</connection>
         <developerConnection>scm:git:https://github.com/techsenger/cs-config.git</developerConnection>
+        <url>https://github.com/techsenger/cs-config</url>
     </scm>
 
     <issueManagement>
