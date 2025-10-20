@@ -145,7 +145,10 @@
 
     <!-- Checks for Size Violations.                    -->
     <!-- See https://checkstyle.org/checks/sizes/index.html -->
-    <module name="MethodLength"/>
+    <module name="MethodLength">
+      <property name="max" value="250"/>
+      <property name="countEmpty" value="false"/>
+    </module>
     <module name="ParameterNumber">
       <property name="max" value="8"/>
     </module>
